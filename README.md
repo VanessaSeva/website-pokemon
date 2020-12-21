@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 
 # website-pokemon
 
->>>>>>> 73997430516e6a8459337485e07c8f11c7ace5e0
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -73,8 +70,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-<<<<<<< HEAD
-=======
->>>>>>> clean
->>>>>>> 73997430516e6a8459337485e07c8f11c7ace5e0
