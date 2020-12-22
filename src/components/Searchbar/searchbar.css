@@ -1,0 +1,11 @@
+.formGroupe {
+ display: flex;
+ justify-content: center;
+ margin-top: 2em;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+}
