@@ -21,7 +21,7 @@ export default class Header extends Component {
                 </li>
                 
               </ul>
-              <span class="glyphicon glyphicon-shopping-cart"></span>
+              <span className="glyphicon glyphicon-shopping-cart"></span>
             </div>
           </header>
         );
