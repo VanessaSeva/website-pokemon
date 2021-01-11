@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './searchbar.css'
+import './searchbar.css';
 import { Formik } from 'formik';
 
 

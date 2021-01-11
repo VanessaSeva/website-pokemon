@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './cardslist.css';
+
 
 
 export default class Cardslist extends Component {
@@ -15,6 +17,8 @@ export default class Cardslist extends Component {
         }  else if (!this.props.loaded) {
            
         return (
+            <div className="container">
+            <div className="Cards">
                 <ul>
                     { this.props.cards.map(card => (
                         <li key={card.id}>
@@ -27,7 +31,8 @@ export default class Cardslist extends Component {
                     
                     
                 </ul>
-                
+                </div>
+                </div>
             )
         }
        

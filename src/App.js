@@ -4,6 +4,10 @@ import Header from './components/Header/header';
 import Searchbar from './components/Searchbar/searchbar';
 import * as axios from 'axios';
 import Cardslist from './components/CardsList/cardslist';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Dashboard  from './components/Dashboard/dashboard';
+import  Preference  from './components/Preference/preference';
+
 
 
 
@@ -50,12 +54,29 @@ componentDidMount(){
 
     render() {
       return(
-        <div>
-          <Header />
-          <Searchbar updateCards={ this.updateCards} />
-          <Cardslist cards={ this.state.cards} />
+        <>
+        <Header />
+        <Searchbar  updateCards={ this.updateCards} />
+
+        <BrowserRouter>
+        <Switch>
+           
+        <Route  exact path="/">
+            <Cardslist cards={ this.state.cards} />
+            </Route>
+       
+  
+          <Route path="/dashboard" component={Dashboard} />
+            
+    
+          <Route path="/preference"  component={Preference}/>
+           
+          
+        </Switch>
+        </BrowserRouter>
+         
         
-        </div>
+        </>
       )
     }
 }
