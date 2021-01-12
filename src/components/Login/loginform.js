@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './login.css';
+import { Redirect } from 'react-router-dom';
 
 
 function LoginForm({ Logged, error }) {
@@ -9,7 +10,6 @@ function LoginForm({ Logged, error }) {
         e.preventDefault();
 
         Logged(details);
-
     }
 
 
@@ -34,7 +34,8 @@ function LoginForm({ Logged, error }) {
                 <input className="form-control form-rounded"  type="password" name="password" id="password" onChange={ e => setDetails({...details, password: e.target.value})} value={details.password} />
             </div>
             <div>
-            <input className="btn btn-primary form-rounded" type="submit" value="Se Connecter"/>
+            <input className="btn btn-primary form-rounded" type="submit" value="Se Connecter"  />
+        
             </div>
         
             

@@ -5,7 +5,10 @@ import './cardslist.css';
 
 
 export default class Cardslist extends Component {
-
+        constructor(props) {
+            super(props);
+            console.log(props);
+        }
 
 
 
