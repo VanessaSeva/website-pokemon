@@ -5,8 +5,8 @@ import Searchbar from './components/Searchbar/searchbar';
 import * as axios from 'axios';
 import Cardslist from './components/CardsList/cardslist';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Dashboard  from './components/Dashboard/dashboard';
-import  Preference  from './components/Preference/preference';
+import Basket  from './components/Basket/basket';
+import  Login  from './components/Login/login';
 
 
 
@@ -66,10 +66,10 @@ componentDidMount(){
             </Route>
        
   
-          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/basket" component={Basket} />
             
     
-          <Route path="/preference"  component={Preference}/>
+          <Route path="/login"  component={Login}/>
            
           
         </Switch>

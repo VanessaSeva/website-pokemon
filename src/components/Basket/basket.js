@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 
-export default class Preference extends Component {
+export default class Basket extends Component {
     render() {
         return (
             <div>
-                <h2>Préférences</h2>
+                <h2>Panier</h2>
             </div>
         )
     }
