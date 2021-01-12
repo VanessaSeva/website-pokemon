@@ -56,7 +56,6 @@ componentDidMount(){
       return(
         <>
         <Header />
-        <Searchbar  updateCards={ this.updateCards} />
 
         <BrowserRouter>
         <Switch>

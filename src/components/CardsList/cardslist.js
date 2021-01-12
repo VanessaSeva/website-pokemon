@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Searchbar from '../Searchbar/searchbar';
 import './cardslist.css';
 
 
@@ -16,9 +17,12 @@ export default class Cardslist extends Component {
 
         }  else if (!this.props.loaded) {
            
+           
         return (
+            
             <div className="container">
-            <div className="Cards">
+                 <div className="Cards">
+            <Searchbar updateCards={ this.updateCards} />
                 <ul>
                     { this.props.cards.map(card => (
                         <li key={card.id}>
