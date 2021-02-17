@@ -1,49 +1,47 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from "react";
 import Searchbar from '../Searchbar/searchbar';
 import './cardslist.css';
+import axios from 'axios'
 
 
+export default function cardslist(props) {
 
-export default class Cardslist extends Component {
-        constructor(props) {
-            super(props);
-            console.log(props);
-        }
+   
+const [cards, setState] = useState([])
+
+useEffect(() => {
+    axios.get('https://api.pokemontcg.io/v2/cards')
+      .then(response => response.data)
+      .then(data=>data.data)
+      .then (data=>setState(data))
+      .catch(error => console.log(error.response)) 
+      }, [])
 
 
+    return (
 
-    render() {
-        console.log(this.props.cards);
-
-        if (this.props.error) {
-            return <div> Erreur</div>
-
-        }  else if (!this.props.loaded) {
-           
-           
-        return (
-            
-            <div className="container">
-                 <div className="Cards">
-            <Searchbar updateCards={ this.updateCards} />
-                <ul>
-                    { this.props.cards.map(card => (
-                        <li key={card.id}>
-                            { card.name }
-                            <img src={ card.imageUrlHiRes } />
-                            </li>
-                        
-                    
-                    ))}
-                    
-                    
-                </ul>
-                </div>
-                </div>
-            )
-        }
-       
-    }
-    
-    
+        <div className="container">
+            <div className="card">
+            <ul>
+                    {
+                      cards.map(card => (
+                          <li key={card.id}>{card.name}
+                        <div>   
+                            {card.evolvesFrom ? 'evolution de ' : 'n a pas d evolution'}
+                          {card.evolvesFrom}
+                        </div>
+                          <img className="card-img-top" src={card.images.small} />
+                            
+                          </li>
+                          
+                         
+                      ))
+                    }       
+                  
+            </ul>
+          
+            </div>
+        </div>
+    )
 }
+

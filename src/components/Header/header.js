@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Searchbar from '../Searchbar/searchbar';
 import './header.css'
 
 
@@ -14,6 +15,7 @@ export default class Header extends Component {
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item active">
                 </li>
+                <Searchbar />
                 <li className="nav-item navbar-nav ml-auto">
                   <a className="nav-link text-warning" href="/">Connecté</a>
                   <a className="nav-link text-warning" href="/">Panier</a>
