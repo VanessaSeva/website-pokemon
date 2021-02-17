@@ -2,10 +2,13 @@
  display: flex;
  justify-content: center;
  margin-top: 2em;
+ background-color: #2B6DB5;
+ height: 80px;
+ margin-top: 0;
 }
-
 input {
     display: flex;
     justify-content: center;
     width: 700px;
+    border-radius: 15px;
 }
