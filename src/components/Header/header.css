@@ -5,7 +5,8 @@
 
 
 .navbar {
-    background-color: #2B6DB5;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,109,181,1) 29%, rgba(0,212,255,1) 100%);
     width: auto;
     height: 50px;
 }

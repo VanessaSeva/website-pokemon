@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import './header.css'
 
 
@@ -18,8 +20,8 @@ export default class Header extends Component {
                 </li>
             
                 <li className="nav-item navbar-nav ml-auto">
-                  <a className="nav-link text-warning text-uppercase" href="/">Connecté</a>
-                  <a className="nav-link text-warning text-uppercase" href="/">Panier</a>
+                  <Link className="nav-link  text-uppercase" to="/favoris">mes favoris</Link>
+                  <a className="nav-link  text-uppercase" href="/">Panier</a>
             
                 </li>
                 
